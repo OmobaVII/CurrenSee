@@ -11,7 +11,7 @@ This goal of this project is to create a currency converter as a standalone desk
 * [License](#license)
 
 ## Usage
- Copy the images directory and the CurrenSee.exe file to your personal computer. Just lauch the CurrenSee.exe file to use.
+ Copy the images directory and the CurrenSee.exe file to the same directory on your personal computer. Just lauch the CurrenSee.exe file to use.
  A user just selects a base currency (the currency to convert from), a target currency (the currency to convert to) and enters the amount(in figure) which he want to convert then clicks on the convert button and the converted amount is displayed.
 
 ## Functionalities of CurrenSee
