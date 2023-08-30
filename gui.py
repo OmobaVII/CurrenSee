@@ -38,23 +38,27 @@ def perform_conversion():
     if error_message:
         label_result.config(text=error_message)
     else:
-        amount = float(amount_str)
-        base_currency = dropdown_base_currency.get()
-        target_currency = dropdown_target_currency.get()
-        result = convert_currency(amount, base_currency, target_currency)
-        converted_amount = result[0]
-        last_update = datetime.strptime(result[1], "%Y-%m-%dT%H:%M:%SZ")
+        try:
+            amount = float(amount_str)
+            base_currency = dropdown_base_currency.get()
+            target_currency = dropdown_target_currency.get()
+            result = convert_currency(amount, base_currency, target_currency)
+            converted_amount = result[0]
+            last_update = datetime.strptime(result[1], "%Y-%m-%dT%H:%M:%SZ")
 
-        if converted_amount != -1:
-            label_result.config(text=f"{converted_amount:.2f} {target_currency}")
-            label_date.config(text=f"Last Updated at: {last_update}")
-        else:
-            label_result.config(text="Error fetching exchange rates")
+            if converted_amount != -1:
+                label_result.config(text=f"{converted_amount:.2f} {target_currency}")
+                label_date.config(text=f"Last Updated at: {last_update}")
+            else:
+                label_result.config(text="Error fetching exchange rates")
+        except Exception as e:
+            label_result.config(text="Check your internet connection")
 
 
 root = tkinter.Tk()
 root.title("CurrenSee")
 root.geometry("700x200")
+root.iconbitmap("images/icon.ico")
 # root.configure(bg="blue")
 
 background_image = PhotoImage(file="images/background2.png")
