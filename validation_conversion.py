@@ -10,7 +10,7 @@ def validate_input(amount_str):
     try:
         amount = float(amount_str)
         if amount <= 0:
-            text = "Amount must be a positive number"
+            text = "Amount must be positive"
         else:
             text = None
     except (ValueError, TypeError):

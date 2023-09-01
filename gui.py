@@ -42,6 +42,12 @@ def perform_conversion():
             amount = float(amount_str)
             base_currency = dropdown_base_currency.get()
             target_currency = dropdown_target_currency.get()
+            if base_currency == "Select Base Currency":
+                label_result.config(text="Select a Base Currency")
+                return
+            if target_currency == "Select Target Currency":
+                label_result.config(text="Select a Target Currency")
+                return
             result = convert_currency(amount, base_currency, target_currency)
             converted_amount = result[0]
             last_update = datetime.strptime(result[1], "%Y-%m-%dT%H:%M:%SZ")
@@ -85,11 +91,11 @@ entry_amount.bind("<FocusOut>", amount_leave)
 
 # Dropdown Menus (for currency selection)
 base_currency_var = StringVar(root)
-base_currency_var.set("Select Target Currency")  # My Default currency
+base_currency_var.set("Select Base Currency")  # My Default currency
 dropdown_base_currency = AutocompleteCombobox(root, font=label_font, foreground=foreground)
 dropdown_base_currency["values"] = currency_values
 dropdown_base_currency["state"] = "readonly"  # Make it readonly
-dropdown_base_currency.set("Select Target Currency")
+dropdown_base_currency.set("Select Base Currency")
 dropdown_base_currency.config(font=label_font, foreground=foreground)
 
 target_currency_var = StringVar(root)
