@@ -3,8 +3,9 @@ header nav ul {
     font-size: 25px;
     font-weight: bold;
 }
-a {
-    font-style: normal;
+header a {
+    text-decoration: none;
+    color: #ff4b00;
 }
 header nav ul {
     display: flex;
@@ -59,6 +60,15 @@ header nav ul {
     color: #00AB5E;
     font-weight: bold;
 }
+
+ul li a img {
+    transition: transform 0.3s;
+}
+
+ul li a:hover img {
+    transform: scale(1.2);
+}
+
 #about p {
     display: inline;
     font-size: 20px;
