@@ -1,0 +1,127 @@
+header nav ul {
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+a {
+    font-style: normal;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 125vh; /* This centers vertically as well */
+    text-align: center; /* Center text content horizontally */
+}
+
+#home img {
+    max-width: 100%;
+    animation: rotate 5s linear infinite alternate;
+}
+
+#home h1 {
+    color: #ff4b00;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    margin: 10px 0; /* Add some vertical spacing */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+#about {
+    margin-top: 30px;
+}
+
+#about h2 {
+    color: #00AB5E;
+    font-weight: bold;
+}
+#about p {
+    display: inline;
+    font-size: 20px;
+}
+
+#about ul {
+    list-style: none;
+}
+#about ul li img {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+#features h2 {
+    font-weight: bolder;
+    color: #00AB5E;
+}
+
+#features ul {
+    list-style: none;
+}
+
+#features ul #first {
+    margin-top: 5px;
+}
+#features ul h1 {
+    color: #007BFF;
+    font-size: 20px;
+}
+#features li {
+    margin-top: 100px;
+}
+
+#contact {
+    font-weight: bold;
+    color: #00AB5E;
+}
+#contact address {
+    color: #007BFF;
+    font-size: 20px;
+}
+
+footer {
+    display:flex; 
+    bottom: 0px;
+	background-color: #FFD17B;
+	text-align: center;
+	border-top: 1px solid #CCCCCC;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 10px;
+    position: static;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
