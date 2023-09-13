@@ -14,9 +14,9 @@ def convert_currency(amount, base_currency, target_currency):
 
     if response.status_code == 200:
         data = response.json()
-        update_at = data["meta"]["last_updated_at"]
+        updated_at = data["meta"]["last_updated_at"]
         conversion_rate = data["data"][target_currency]["value"]
-        converted_currency = amount * conversion_rate
-        return converted_currency, update_at
+        converted_amount = amount * conversion_rate
+        return converted_amount, updated_at
     else:
         return response.status_code

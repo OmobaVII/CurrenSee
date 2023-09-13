@@ -4,7 +4,7 @@ This module designs the GUI of the CurrenSee
 """
 import tkinter
 from tkinter import Label, Entry, StringVar
-from tkinter import Button, ttk, PhotoImage, Listbox
+from tkinter import Button, PhotoImage
 from currency_convert import convert_currency
 from validation_conversion import validate_input, currency_values
 from ttkwidgets.autocomplete import AutocompleteCombobox
